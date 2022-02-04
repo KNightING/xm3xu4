@@ -4,97 +4,114 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import Skill, { SkillInfo, SkillData } from "./components/Skill.vue";
 import Experience, { ExperienceInfo } from "./components/Experience.vue";
-
-let hello = 'Hello Vue 3 + TypeScript + Vite';
+import logo_kotlin from "./assets/logo_kotlin.svg";
+import logo_c_sharp from "./assets/logo_c_sharp.svg";
+import logo_golang from "./assets/logo_golang.svg";
+import logo_java from "./assets/logo_java.svg";
+import logo_dart from "./assets/logo_dart.svg";
+import logo_html_5 from "./assets/logo_html_5.svg";
+import logo_css3 from "./assets/logo_css3.svg";
+import logo_javascript from "./assets/logo_javascript.svg";
+import logo_typescript from "./assets/logo_typescript.svg";
+import logo_vue_js from "./assets/logo_vue_js.svg";
+import logo_tailwindcss from "./assets/logo_tailwindcss.svg";
+import logo_microsoft_sql_server from "./assets/logo_microsoft_sql_server.svg";
+import logo_redis from "./assets/logo_redis.svg";
+import logo_asp_net_mvc from "./assets/logo_asp_net_mvc.png";
+import logo_asp_net_core from "./assets/logo_asp_net_core.png";
+import logo_android_os from "./assets/logo_android_os.svg";
+import logo_flutter from "./assets/logo_flutter.svg";
+import logo_git from "./assets/logo_git.svg";
+import logo_docker from "./assets/logo_docker.svg";
 
 let skillData: SkillData = {
   languages: [
     {
-      icon: '@/assets/logo_kotlin.svg',
-      name: 'Kotlin'
+      icon: logo_kotlin,
+      name: "Kotlin",
     },
     {
-      icon: '@/assets/logo_c_sharp.svg',
-      name: 'C#'
+      icon: logo_c_sharp,
+      name: "C#",
     },
     {
-      icon: '@/assets/logo_golang.svg',
-      name: 'Golang'
+      icon: logo_golang,
+      name: "Golang",
     },
     {
-      icon: '@/assets/logo_java.svg',
-      name: 'Java'
+      icon: logo_java,
+      name: "Java",
     },
     {
-      icon: '@/assets/logo_dart.svg',
-      name: 'Dart'
+      icon: logo_dart,
+      name: "Dart",
     },
     {
-      icon: '@/assets/logo_javascript.svg',
-      name: 'Javascript'
+      icon: logo_javascript,
+      name: "Javascript",
     },
     {
-      icon: '@/assets/logo_html_5.svg',
-      name: 'Html5'
+      icon: logo_html_5,
+      name: "Html5",
     },
     {
-      icon: '@/assets/logo_css3.svg',
-      name: 'Css3'
+      icon: logo_css3,
+      name: "Css3",
     },
     {
-      icon: '@/assets/logo_typescript.svg',
-      name: 'Typescript'
-    }
+      icon: logo_typescript,
+      name: "Typescript",
+    },
   ],
   frontends: [
     {
-      icon: '@/assets/logo_vue_js.svg',
-      name: 'Vue'
+      icon: logo_vue_js,
+      name: "Vue",
     },
     {
-      icon: '@/assets/logo_tailwindcss.svg',
-      name: 'Tailwind'
+      icon: logo_tailwindcss,
+      name: "Tailwind",
     },
   ],
   backends: [
     {
-      icon: '@/assets/logo_microsoft_sql_server.svg',
-      name: 'SqlServer'
+      icon: logo_microsoft_sql_server,
+      name: "SqlServer",
     },
     {
-      icon: '@/assets/logo_redis.svg',
-      name: 'Redis'
+      icon: logo_redis,
+      name: "Redis",
     },
     {
-      icon: '@/assets/logo_asp_net_core.png',
-      name: '.NET Core'
+      icon: logo_asp_net_core,
+      name: ".NET Core",
     },
     {
-      icon: '@/assets/logo_asp_net_mvc.png',
-      name: '.NET MVC'
+      icon: logo_asp_net_mvc,
+      name: ".NET MVC",
     },
   ],
   mobiles: [
     {
-      icon: '@/assets/logo_android_os.svg',
-      name: 'Android'
+      icon: logo_android_os,
+      name: "Android",
     },
     {
-      icon: '@/assets/logo_flutter.svg',
-      name: 'Flutter'
+      icon: logo_flutter,
+      name: "Flutter",
     },
   ],
   tools: [
     {
-      icon: '@/assets/logo_git.svg',
-      name: 'Git'
+      icon: logo_git,
+      name: "Git",
     },
     {
-      icon: '@/assets/logo_docker.svg',
-      name: 'Docker'
+      icon: logo_docker,
+      name: "Docker",
     },
-  ]
-}
+  ],
+};
 
 let experiences: ExperienceInfo[] = [
   {
@@ -102,21 +119,20 @@ let experiences: ExperienceInfo[] = [
     title: "加入 統智股份有限公司",
     content: `進入統智擔任<b class='text-blue-600'>系統工程師</b>，並接手維運<b class='text-blue-600'>黑貓宅急便</b>SD用的手持裝置，
     系統使用<b class='text-blue-600'>WinCE</b>並使用<b class='text-blue-600'>C#寫WinForm</b>，該專案持續維運至2021年中
-    `
+    `,
   },
   {
     date: new Date(2016, 5),
     title: "統智股份有限公司",
-    content: ""
-  }
-]
+    content: "",
+  },
+];
 
 function years() {
   let born = new Date(1993, 8, 21);
-  let diff = (Math.abs(born.getTime() - Date.now())).valueOf();
+  let diff = Math.abs(born.getTime() - Date.now()).valueOf();
   return Math.floor(diff / 1000 / 60 / 60 / 24 / 365);
 }
-
 </script>
 
 <template>
@@ -152,7 +168,11 @@ function years() {
           </p>
 
           <div id="social-group" class="w-full flex md:justify-start justify-center mt-1">
-            <a href="https://github.com/KNightING" target="_blank" rel="noreferrer noopener">
+            <a
+              href="https://github.com/KNightING"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <i class="fab fa-github text-2xl text-gray-400 hover:text-gray-900"></i>
             </a>
           </div>
