@@ -3,6 +3,7 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from "./components/HelloWorld.vue";
 import Skill, { SkillInfo, SkillData } from "./components/Skill.vue";
+import Experience, { ExperienceInfo } from "./components/Experience.vue";
 
 let hello = 'Hello Vue 3 + TypeScript + Vite';
 
@@ -95,6 +96,21 @@ let skillData: SkillData = {
   ]
 }
 
+let experiences: ExperienceInfo[] = [
+  {
+    date: new Date(2016, 5),
+    title: "加入 統智股份有限公司",
+    content: `進入統智擔任<b class='text-blue-600'>系統工程師</b>，並接手維運<b class='text-blue-600'>黑貓宅急便</b>SD用的手持裝置，
+    系統使用<b class='text-blue-600'>WinCE</b>並使用<b class='text-blue-600'>C#寫WinForm</b>，該專案持續維運至2021年中
+    `
+  },
+  {
+    date: new Date(2016, 5),
+    title: "統智股份有限公司",
+    content: ""
+  }
+]
+
 function years() {
   let born = new Date(1993, 8, 21);
   let diff = (Math.abs(born.getTime() - Date.now())).valueOf();
@@ -144,16 +160,15 @@ function years() {
       </div>
     </div>
 
-    <div class="w-full flex flex-col md:flex-row">
+    <div class="w-full flex flex-col md:flex-row my-4">
       <div class="flex-1">
         <Skill :skill="skillData"></Skill>
       </div>
 
-      <div class="flex-1 h-10 bg-blue-500"></div>
+      <div class="flex-[1.25_0_0]">
+        <Experience :experiences="experiences"></Experience>
+      </div>
     </div>
-
-    <HelloWorld :msg="hello" />
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
   </div>
 </template>
 
