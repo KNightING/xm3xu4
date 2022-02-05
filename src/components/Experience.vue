@@ -17,7 +17,7 @@
                     <span
                         v-if="experience.date"
                         class="text-lg"
-                    >{{ experience.date?.getFullYear() }} 年 {{ experience.date?.getMonth() }} 月</span>
+                    >{{ experience.date?.getFullYear() }} 年 {{ experience.date?.getMonth() + 1 }} 月</span>
                     <span class="block text-xl font-bold">{{ experience.title }}</span>
                     <span v-html="experience.content" v-if="experience.content" class="block"></span>
                     <template v-if="experience.project">
@@ -31,34 +31,41 @@
                                 >
                                     <b class="text-purple-600">{{ detail.customer }}</b>
                                     {{ detail.projectName }}
+                                    <small
+                                        v-if="detail.isDemo"
+                                        class="font-mono text-red-700 font-bold italic"
+                                    >DEMO</small>
                                     <p>
+                                        <small
+                                            v-if="detail.isSingle"
+                                            class="p-1 px-2 rounded-md bg-yellow-200 text-gray-800 mr-1"
+                                        >獨立作業</small>
+                                        <small
+                                            v-for="role in detail.role"
+                                            :key="role"
+                                            class="p-1 px-2 rounded-md bg-lime-300 text-gray-800 mr-1"
+                                        >{{ role }}</small>
                                         <small
                                             v-for="useSkill in detail.useSkill"
                                             :key="useSkill"
                                             class="p-1 px-2 rounded-md bg-green-300 text-gray-800 mr-1"
                                         >{{ useSkill }}</small>
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </template>
-                    <template v-if="experience.newOpportunities">
-                        <div class="mt-2">
-                            <span class="font-bold">新商機開發</span>
-                            <ul class="list-disc pl-10">
-                                <li
-                                    v-for="detail in experience.newOpportunities"
-                                    :key="detail.projectName"
-                                    class="mt-1"
-                                >
-                                    <b class="text-purple-600">{{ detail.customer }}</b>
-                                    {{ detail.projectName }}
-                                    <p>
-                                        <small
-                                            v-for="useSkill in detail.useSkill"
-                                            :key="useSkill"
-                                            class="p-1 px-2 rounded-md bg-green-300 text-gray-800 mr-1"
-                                        >{{ useSkill }}</small>
+                                        <span
+                                            v-html="detail.content"
+                                            v-if="detail.content"
+                                            class="block text-sm"
+                                        ></span>
+                                        <a
+                                            v-if="detail.iconSrc"
+                                            :href="detail.iconLink"
+                                            target="_blank"
+                                            rel="noreferrer noopener"
+                                        >
+                                            <img
+                                                class="object-cover w-20 inline-block rounded-lg"
+                                                :src="detail.iconSrc"
+                                            />
+                                        </a>
                                     </p>
                                 </li>
                             </ul>
@@ -77,8 +84,7 @@ export interface ExperienceInfo {
     content: string,
     iconSrc?: string,
     iconLink?: string,
-    project?: ExperienceDetail[],
-    newOpportunities?: ExperienceDetail[],
+    project?: ExperienceDetail[]
 }
 
 export interface ExperienceDetail {
@@ -86,8 +92,11 @@ export interface ExperienceDetail {
     projectName: string,
     content: string,
     useSkill: string[],
+    role?: string[],
     iconSrc?: string,
     iconLink?: string,
+    isDemo?: boolean,
+    isSingle?: boolean
 }
 
 

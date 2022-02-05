@@ -1,7 +1,7 @@
 <template>
     <div class="group">
         <h4
-            class="mt-3 text-xl group-hover:font-bold group-hover:scale-125 group-hover:translate-x-20"
+            class="mt-3 text-xl group-hover:font-bold group-hover:scale-125 group-hover:translate-x-16"
         >{{ props.title }}</h4>
         <div class="flex flex-wrap gap-3">
             <div
