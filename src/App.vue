@@ -119,59 +119,85 @@ let experiences: ExperienceInfo[] = [
     title: "加入 統智股份有限公司",
     content: `進入統智擔任<b class='text-blue-600'>系統工程師</b>，並接手維運<b class='text-purple-600'>黑貓宅急便</b>送貨司機、事務員等用的手持裝置，
     系統使用<b class='text-blue-600'>WinCE</b>並使用<b class='text-blue-600'>C#寫WinForm</b>，該專案持續維運至2021年中左右。
-    <br/>
-    <span class='font-bold'>參與新專案</span>
-    <ul class='list-disc pl-10'>
-    <li>
-      <b class='text-purple-600'>黑貓宅急便</b>資訊工程維護系統<small class='text-gray-500'>(Golang、Angular.js)</small><br/>
-      
-    </li>
-    <li>
-      <b class='text-purple-600'>家樂福</b>揀貨程式<small class='text-gray-500'>(WinCE、C#)</small>
-    </li>
-    </ul>
-    <span class='font-bold'>新商機開發</span>
-     <ul class='list-disc pl-10'>
-    <li>
-    <b class='text-blue-600'>WEB客服聊天室</b><small class='text-gray-500'>(asp.net MVC、signalR)</small>
-    </li>
-    </ul>
     `,
+    project: [
+      {
+        customer: "黑貓宅急便",
+        projectName: "集配手持終端機",
+        content: ``,
+        useSkill: ["WinCE", "C#"]
+      },
+      {
+        customer: "家樂福",
+        projectName: "揀貨程式",
+        content: ``,
+        useSkill: ["WinCE", "C#"]
+      },
+      {
+        customer: "黑貓宅急便",
+        projectName: "資訊工程維護系統",
+        content: ``,
+        useSkill: ["Golang", "Angular.js#"]
+      }
+    ],
+    newOpportunities: [
+      {
+        projectName: "WEB客服聊天室",
+        content: ``,
+        useSkill: ["asp.net MVC", "signalR"]
+      }
+    ]
   },
   {
     date: new Date(2017, 3),
     title: "取得AAD",
     content: `取得<b class='text-blue-600'>Associate Android Developer</b>證照，並開始參與Android相關專案
     <a href='https://www.credential.net/23cca15b-bea9-4689-a0c7-7c1c793a171d' target="_blank" rel="noreferrer noopener" alt='Associate Android Developer'><img class='md:max-w-sm' src='https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/10942288'></img></a>
-    <span class='font-bold'>參與新專案</span>
-    <ul class='list-disc pl-10'>
-    <li>
-     <b class='text-purple-600'>首阜</b>查核App<small class='text-gray-500'>(Andorid、Java)</small>
-    </li>
-    <li>
-      <b class='text-purple-600'>沐春</b>盤點App<small class='text-gray-500'>(Andorid、Kotlin)</small>
-    </li>
-    </ul>
-    <span class='font-bold'>新商機開發</span>
-    <ul class='list-disc pl-10'>
-    <li>
-    <b class='text-blue-600'>排隊App</b><small class='text-gray-500'>(Andorid、Kotlin)</small>
-    </li>
-    <li>
-    <b class='text-purple-600'>台鐵</b>便當販售App<small class='text-gray-500'>(Andorid、Kotlin)</small>
-    </li>
     `,
+    project: [
+      {
+        customer: "首阜",
+        projectName: "查核App",
+        content: ``,
+        useSkill: ["Android", "Java"]
+      }
+    ],
+    newOpportunities: [
+      {
+        projectName: "排隊App",
+        content: ``,
+        useSkill: ["Android", "Kotlin"]
+      },
+      {
+        customer: "台鐵",
+        projectName: "便當販售App",
+        content: ``,
+        useSkill: ["Android", "Kotlin"]
+      },
+      {
+        customer: "沐春",
+        projectName: "盤點App",
+        content: ``,
+        useSkill: ["Android", "Kotlin"]
+      },
+    ]
   },
   {
-    date: new Date(2017, 6),
+    date: new Date(2018, 1),
     title: "大智通物流士APP次代開發",
     content: `<b class='text-purple-600'>大智通</b>物流士App從<b class='text-blue-600'>WinCE</b>移植至<b class='text-blue-600'>Android</b>，
     在專案內擔任<b class='text-blue-600'>SA</b>與<b class='text-blue-600'>PG</b>的角色，負責依照<b class='text-blue-600'>WinCE</b>版本的程式碼寫成設計書與App共通類與部分功能的開發。<br/>
     `,
   },
   {
-    date: new Date(2018, 3),
+    date: new Date(2018, 6),
     title: "大智通物流士APP次代上線",
+    content: `
+    `,
+  },
+  {
+    date: new Date(2018, 7),
+    title: "富邦手機e方便優化專案",
     content: `
     `,
   },
