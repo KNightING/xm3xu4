@@ -117,14 +117,63 @@ let experiences: ExperienceInfo[] = [
   {
     date: new Date(2016, 5),
     title: "加入 統智股份有限公司",
-    content: `進入統智擔任<b class='text-blue-600'>系統工程師</b>，並接手維運<b class='text-blue-600'>黑貓宅急便</b>SD用的手持裝置，
-    系統使用<b class='text-blue-600'>WinCE</b>並使用<b class='text-blue-600'>C#寫WinForm</b>，該專案持續維運至2021年中
+    content: `進入統智擔任<b class='text-blue-600'>系統工程師</b>，並接手維運<b class='text-purple-600'>黑貓宅急便</b>送貨司機、事務員等用的手持裝置，
+    系統使用<b class='text-blue-600'>WinCE</b>並使用<b class='text-blue-600'>C#寫WinForm</b>，該專案持續維運至2021年中左右。
+    <br/>
+    <span class='font-bold'>參與新專案</span>
+    <ul class='list-disc pl-10'>
+    <li>
+      <b class='text-purple-600'>黑貓宅急便</b>資訊工程維護系統<small class='text-gray-500'>(Golang、Angular.js)</small><br/>
+      
+    </li>
+    <li>
+      <b class='text-purple-600'>家樂福</b>揀貨程式<small class='text-gray-500'>(WinCE、C#)</small>
+    </li>
+    </ul>
+    <span class='font-bold'>新商機開發</span>
+     <ul class='list-disc pl-10'>
+    <li>
+    <b class='text-blue-600'>WEB客服聊天室</b><small class='text-gray-500'>(asp.net MVC、signalR)</small>
+    </li>
+    </ul>
     `,
   },
   {
-    date: new Date(2016, 5),
-    title: "統智股份有限公司",
-    content: "",
+    date: new Date(2017, 3),
+    title: "取得AAD",
+    content: `取得<b class='text-blue-600'>Associate Android Developer</b>證照，並開始參與Android相關專案
+    <a href='https://www.credential.net/23cca15b-bea9-4689-a0c7-7c1c793a171d' target="_blank" rel="noreferrer noopener" alt='Associate Android Developer'><img class='md:max-w-sm' src='https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/10942288'></img></a>
+    <span class='font-bold'>參與新專案</span>
+    <ul class='list-disc pl-10'>
+    <li>
+     <b class='text-purple-600'>首阜</b>查核App<small class='text-gray-500'>(Andorid、Java)</small>
+    </li>
+    <li>
+      <b class='text-purple-600'>沐春</b>盤點App<small class='text-gray-500'>(Andorid、Kotlin)</small>
+    </li>
+    </ul>
+    <span class='font-bold'>新商機開發</span>
+    <ul class='list-disc pl-10'>
+    <li>
+    <b class='text-blue-600'>排隊App</b><small class='text-gray-500'>(Andorid、Kotlin)</small>
+    </li>
+    <li>
+    <b class='text-purple-600'>台鐵</b>便當販售App<small class='text-gray-500'>(Andorid、Kotlin)</small>
+    </li>
+    `,
+  },
+  {
+    date: new Date(2017, 6),
+    title: "大智通物流士APP次代開發",
+    content: `<b class='text-purple-600'>大智通</b>物流士App從<b class='text-blue-600'>WinCE</b>移植至<b class='text-blue-600'>Android</b>，
+    在專案內擔任<b class='text-blue-600'>SA</b>與<b class='text-blue-600'>PG</b>的角色，負責依照<b class='text-blue-600'>WinCE</b>版本的程式碼寫成設計書與App共通類與部分功能的開發。<br/>
+    `,
+  },
+  {
+    date: new Date(2018, 3),
+    title: "大智通物流士APP次代上線",
+    content: `
+    `,
   },
 ];
 
@@ -137,13 +186,13 @@ function years() {
 
 <template>
   <div id="resume" class="h-full overflow-y-scroll flex flex-col items-center font-sans">
-    <div class="w-full flex justify-center bg-yellow-50 shadow-zinc-400">
+    <div class="w-full flex justify-center bg-sky-100">
       <div
         id="profile"
         class="w-full md:w-[600px] flex flex-col items-center justify-center md:flex-row py-4"
       >
         <img
-          class="h-64 w-64 md:h-52 md:w-52 rounded-full bg-gradient-to-tl from-yellow-300 via-red-500 to-indigo-500 p-1.5"
+          class="object-cover h-64 w-64 md:h-52 md:w-52 rounded-full bg-gradient-to-tl from-yellow-300 via-red-500 to-indigo-500 p-1.5"
           alt="Picture"
           src="./assets/picture.jpg"
         />
@@ -168,12 +217,10 @@ function years() {
           </p>
 
           <div id="social-group" class="w-full flex md:justify-start justify-center mt-1">
-            <a
-              href="https://github.com/KNightING"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <i class="fab fa-github text-2xl text-gray-400 hover:text-gray-900"></i>
+            <a href="https://github.com/KNightING" target="_blank" rel="noreferrer noopener">
+              <i
+                class="leading-none fab fa-github text-2xl text-gray-400 hover:text-gray-900 relative after:hover:opacity-100 after:hover:animate-ping after:opacity-0 after:rounded-full after:w-full after:h-full after:bg-gray-300 after:absolute after:top-0 after:left-0"
+              ></i>
             </a>
           </div>
         </div>
@@ -185,7 +232,7 @@ function years() {
         <Skill :skill="skillData"></Skill>
       </div>
 
-      <div class="flex-[1.25_0_0]">
+      <div class="flex-[1.4_0_0]">
         <Experience :experiences="experiences"></Experience>
       </div>
     </div>
