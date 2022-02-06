@@ -1,6 +1,6 @@
 <template>
     <div class="mx-3 flex flex-col mb-10">
-        <h3 class="text-4xl">
+        <h3 class="text-3xl my-1">
             <i class="fas fa-book mr-3"></i>專業技能
         </h3>
         <div class="h-1 bg-gradient-to-tl from-yellow-300 via-red-500 to-indigo-500" />
