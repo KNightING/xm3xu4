@@ -510,11 +510,22 @@ function years() {
         id="profile"
         class="w-full md:w-[600px] flex flex-col items-center justify-center md:flex-row py-4"
       >
-        <img
+        <!-- <img
           class="object-cover h-64 w-64 md:h-52 md:w-52 rounded-full bg-gradient-to-tl from-yellow-300 via-red-500 to-indigo-500 p-1.5"
           alt="Picture"
           src="./assets/picture.jpg"
-        />
+        />-->
+
+        <div class="relative top-0 left-0 h-64 w-64 md:h-52 md:w-52">
+          <div
+            class="relative top-0 left-0 h-64 w-64 md:h-52 md:w-52 rounded-full bg-gradient-to-tl from-yellow-300 via-red-500 to-indigo-500 animate-spin"
+          ></div>
+          <img
+            class="absolute top-0 left-0 h-64 w-64 md:h-52 md:w-52 object-cover rounded-full p-1.5"
+            alt="Picture"
+            src="./assets/picture.jpg"
+          />
+        </div>
 
         <div class="m-4 w-full md:text-left text-center px-8">
           <p>
