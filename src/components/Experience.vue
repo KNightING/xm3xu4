@@ -35,21 +35,23 @@
                                         v-if="detail.isDemo"
                                         class="font-mono text-red-700 font-bold italic"
                                     >DEMO</small>
-                                    <p>
-                                        <small
-                                            v-if="detail.isSingle"
-                                            class="p-1 px-2 rounded-md bg-yellow-200 text-gray-800 mr-1"
-                                        >獨立作業</small>
-                                        <small
-                                            v-for="role in detail.role"
-                                            :key="role"
-                                            class="p-1 px-2 rounded-md bg-lime-300 text-gray-800 mr-1"
-                                        >{{ role }}</small>
-                                        <small
-                                            v-for="useSkill in detail.useSkill"
-                                            :key="useSkill"
-                                            class="p-1 px-2 rounded-md bg-green-300 text-gray-800 mr-1"
-                                        >{{ useSkill }}</small>
+                                    <div>
+                                        <div class="flex flex-wrap">
+                                            <small
+                                                v-if="detail.isSingle"
+                                                class="p-1 px-2 rounded-md bg-yellow-200 text-gray-800 mr-1 my-1"
+                                            >獨立作業</small>
+                                            <small
+                                                v-for="role in detail.role"
+                                                :key="role"
+                                                class="p-1 px-2 rounded-md bg-lime-300 text-gray-800 mr-1 my-1"
+                                            >{{ role }}</small>
+                                            <small
+                                                v-for="useSkill in detail.useSkill"
+                                                :key="useSkill"
+                                                class="p-1 px-2 rounded-md bg-green-300 text-gray-800 mr-1 my-1"
+                                            >{{ useSkill }}</small>
+                                        </div>
                                         <span
                                             v-html="detail.content"
                                             v-if="detail.content"
@@ -66,7 +68,7 @@
                                                 :src="detail.iconSrc"
                                             />
                                         </a>
-                                    </p>
+                                    </div>
                                 </li>
                             </ul>
                         </div>

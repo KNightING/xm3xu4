@@ -160,7 +160,7 @@ let experiences: ExperienceInfo[] = [
     date: new Date(2017, 2),
     title: "取得AAD",
     content: `取得<b class='text-blue-600'>Associate Android Developer</b>證照，並開始參與Android相關專案
-    <a href='https://www.credential.net/23cca15b-bea9-4689-a0c7-7c1c793a171d' target="_blank" rel="noreferrer noopener" alt='Associate Android Developer'><img class='md:max-w-sm inline-block' src='https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/10942288'></img></a>
+    <a class='block' href='https://www.credential.net/23cca15b-bea9-4689-a0c7-7c1c793a171d' target="_blank" rel="noreferrer noopener" alt='Associate Android Developer'><img class='md:max-w-sm inline-block' src='https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/10942288'></img></a>
     `,
     project: [
       {
@@ -396,6 +396,8 @@ let experiences: ExperienceInfo[] = [
         useSkill: ["Android", "Kotlin", "Java"],
         role: ["PG"],
         isSingle: true,
+        iconSrc: "https://play-lh.googleusercontent.com/AryhbLLrwF06TfCfyBDwGf_5cVtH5f9zNRzzFlI9UpOVSlu5lv_asVNYaPwF_YPNaA=s360-rw",
+        iconLink: "https://play.google.com/store/apps/details?id=com.ptc.tcatcollectpayapp&hl=zh_TW&gl=US",
         content: `
         提供預約寄送功能且可以用手機進行支付貨到付款的費用。
         `,
@@ -406,6 +408,7 @@ let experiences: ExperienceInfo[] = [
         useSkill: ["Android", "Kotlin"],
         role: ["PG"],
         isSingle: true,
+        isDemo: true,
         content: `<b class='text-purple-600'>優仕淨水</b>是提供路邊加水站的公司，該APP則是給去加水站取帳時，提供記錄計算帳務的APP。`,
       },
     ],
